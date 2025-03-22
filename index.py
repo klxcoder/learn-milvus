@@ -77,3 +77,12 @@ res = client.query(
 
 print('All history entities:')
 print(res)
+
+res = client.query(
+    collection_name="demo_collection",
+    ids=[0, 2],
+    output_fields=["vector", "text", "subject"], # will print long result (because of vector field)
+)
+
+print('entities with id=[0, 2]')
+print(res)
