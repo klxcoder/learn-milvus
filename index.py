@@ -68,3 +68,12 @@ res = client.search(
 )
 
 print(res)
+
+res = client.query(
+    collection_name="demo_collection",
+    filter="subject == 'history'",
+    output_fields=["text", "subject"],
+)
+
+print('All history entities:')
+print(res)
