@@ -86,3 +86,9 @@ res = client.query(
 
 print('entities with id=[0, 2]')
 print(res)
+
+# Delete entities by primary key
+res = client.delete(collection_name="demo_collection", ids=[0, 2])
+
+print('Deleted entries:')
+print(res)
