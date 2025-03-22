@@ -25,3 +25,7 @@ data = [
 
 print("Data has", len(data), "entities, each with fields: ", data[0].keys())
 print("Vector dim:", len(data[0]["vector"]))
+
+res = client.insert(collection_name="demo_collection", data=data)
+
+print(res)
