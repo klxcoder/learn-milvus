@@ -92,3 +92,12 @@ res = client.delete(collection_name="demo_collection", ids=[0, 2])
 
 print('Deleted entries:')
 print(res)
+
+# Delete entities by a filter expression
+res = client.delete(
+    collection_name="demo_collection",
+    filter="subject == 'biology'",
+)
+
+print('Deleted biology entries:')
+print(res)
